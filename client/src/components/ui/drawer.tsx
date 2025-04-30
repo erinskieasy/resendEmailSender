@@ -8,12 +8,15 @@ import { cn } from "@/lib/utils"
 const Drawer = ({
   shouldScaleBackground = true,
   ...props
-}: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
-  <DrawerPrimitive.Root
-    shouldScaleBackground={shouldScaleBackground}
-    {...props}
-  />
-)
+}: React.ComponentProps<typeof DrawerPrimitive.Root>) => {
+  console.log("Drawer component rendered!"); // Added console log
+  return (
+    <DrawerPrimitive.Root
+      shouldScaleBackground={shouldScaleBackground}
+      {...props}
+    />
+  );
+}
 Drawer.displayName = "Drawer"
 
 const DrawerTrigger = DrawerPrimitive.Trigger
